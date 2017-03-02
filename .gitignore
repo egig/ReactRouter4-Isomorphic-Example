@@ -1,0 +1,7 @@
+
+.idea/
+build/
+node_modules/
+package.json
+public/*
+!public/.gitkeep
