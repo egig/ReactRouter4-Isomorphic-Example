@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import { StaticRouter } from 'react-router'
-import Qraved from './ReactRouter4App';
+import ReactRouter4App from './ReactRouter4App';
 import Html from './Html';
 
 const serverView = function serverView(req) {
@@ -11,7 +11,7 @@ const serverView = function serverView(req) {
 	return ReactDOMServer.renderToString(
 		<Html>
 			<StaticRouter location={req.url} context={context}>
-				<Qraved />
+				<ReactRouter4App />
 			</StaticRouter>
 		</Html>
 	)

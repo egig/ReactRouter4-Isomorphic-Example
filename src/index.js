@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Qraved from './ReactRouter4App';
+import ReactRouter4App from './ReactRouter4App';
 import { BrowserRouter } from 'react-router-dom'
 
 const BasicExample = () => (
 	<BrowserRouter>
-		<Qraved />
+		<ReactRouter4App />
 	</BrowserRouter>
 );
 
