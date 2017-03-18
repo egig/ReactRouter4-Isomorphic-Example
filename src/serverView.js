@@ -6,15 +6,16 @@ import Html from './Html';
 
 const serverView = function serverView(req) {
 
-	const context = {}
+	const context = {};
+	let data = {}
 
-	return ReactDOMServer.renderToString(
-		<Html>
-			<StaticRouter location={req.url} context={context}>
-				<ReactRouter4App />
-			</StaticRouter>
-		</Html>
-	)
+	data.children = ReactDOMServer.renderToString(
+		<StaticRouter location={req.url} context={context}>
+			<ReactRouter4App />
+		</StaticRouter>
+	);
+
+	return ReactDOMServer.renderToString(<Html {...data} />);
 
 };
 

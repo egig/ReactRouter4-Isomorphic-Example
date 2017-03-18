@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom'
+import Button from './Button';
 
 class Home extends React.Component {
 
@@ -31,7 +32,7 @@ const ReactRouter4App = function (props) {
 				<li><Link to="/id/about">About</Link></li>
 				<li><Link to="/jakarta/restaurant">Topics</Link></li>
 			</ul>
-
+			<Button text="Test Button"/>
 			<hr/>
 
 			<Route exact path="/" component={Home}/>

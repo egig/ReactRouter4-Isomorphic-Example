@@ -11,7 +11,7 @@ app.use(express.static(__dirname+'/public'));
 app.get('*', function (req, res) {
 
 	let html = serverView(req);
-	return res.end(html);
+	return res.send(`<!DOCTYPE html>${html}`);
 });
 
 app.listen(3001, function () {

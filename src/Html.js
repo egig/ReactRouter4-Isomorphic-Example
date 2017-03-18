@@ -1,16 +1,19 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom'
 
-const ReactRouter4App = function (props) {
+const Html = function (props) {
 	return (
 		<html>
-			<head><title>Belajar RR4</title></head>
+			<head>
+				<title>Belajar RR4</title>
+				<link rel="stylesheet" type="text/css" href="/css/common.css"  />
+			</head>
 			<body>
-				<div id="app">{props.children}</div>
+				<div id="app" dangerouslySetInnerHTML={{__html: props.children}} />
 				<script src="/bundle.js"></script>
 			</body>
 		</html>
 	);
 };
 
-module.exports = ReactRouter4App;
+module.exports = Html;
